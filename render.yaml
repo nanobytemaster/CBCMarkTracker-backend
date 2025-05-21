@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cbc-mark-backend
+    env: python
+    buildCommand: ""
+    startCommand: python flask_server.py
+    plan: free
