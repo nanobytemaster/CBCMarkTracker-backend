@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 DB_PATH = os.path.join(os.path.dirname(__file__), 'data', 'learners.db')
 
+@app.route('/', methods=['GET'])
+def home():
+    return "Backend is running"
+
 @app.route('/submit_marks', methods=['POST'])
 def submit_marks():
     data = request.json
